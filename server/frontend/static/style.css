@@ -124,3 +124,52 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+.cont-card-cont {
+  border: rgb(103, 102, 105) 1px solid;
+  display: flex;  
+  flex-direction: column;
+  margin-left:10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 80%; 
+  border-radius: 20px; 
+  padding-top: 20px;
+}
+
+.cont-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.cont-icon {
+    height: 300px;
+    width: 300px;
+    margin-right: 200px;
+}
+
+
+.vert-line {
+  border-left: 4px solid black;
+  height: 300px;
+  left: 50%;
+  margin-left: -3px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  top: 0;
+  border-radius: 10px;
+}
+
+.cont-info {
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(37, 117, 255);
+    margin-left: 200px;
+    
+}
+
+.cont-info > p {
+    margin: 5px;
+}
