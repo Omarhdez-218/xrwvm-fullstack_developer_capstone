@@ -3,18 +3,19 @@ from .models import CarMake, CarModel
 
 
 # Register your models here.
-admin.site.register(CarMake)
-admin.site.register(CarModel)
 
 class CarModelInline(admin.StackedInline):
     model = CarModel
-    extra = 5
+    extra = 2
+
+class CarMakeAdmin(admin.ModelAdmin):
+    fields = ['name', 'description']
+    inlines = [CarModelInline]
 
 class CarModelAdmin(admin.ModelAdmin):
-    fields = ['name', 'type', 'year']
-    inlines = CarModelInline
+    fields = ['car_make', 'name', 'dealer_id', 'model_type', 'year']
 
-class CarMakeAdmin(CarModelInline):
-    ...
 
 # Register models here
+admin.site.register(CarMake, CarMakeAdmin)
+admin.site.register(CarModel, CarModelAdmin)
