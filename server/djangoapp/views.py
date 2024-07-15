@@ -41,7 +41,7 @@ def login_user(request):
 # Create a `logout_request` view to handle sign out request
 def logout_request(request):
     logout(request)
-    data = {"username":""}
+    data = {"userName":""}
     return JsonResponse(data)
 
 # Create a `registration` view to handle sign up request
@@ -76,7 +76,6 @@ def registration(request):
     else :
         data = {"userName":username,"error":"Already Registered"}
         return JsonResponse(data)
-
 # # Update the `get_dealerships` view to render the index page with
 # a list of dealerships
 # def get_dealerships(request):
